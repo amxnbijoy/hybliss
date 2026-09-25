@@ -1,0 +1,3517 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HYBLISS CARE | Wet Wipes & Hygiene Solutions</title>
+
+<meta
+    name="description"
+    content="HYBLISS CARE Products, founded in 2024, offers its own-brand wet wipes, hygiene kits and sanitary kits for businesses and organizations."
+>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+    --ice:#EAF7F8;
+    --ice-blue:#CDECEF;
+
+    --lavender-mist:#E9E1F5;
+    --lavender:#C9B8E8;
+
+    --purple:#8B6FB3;
+    --purple-dark:#6F5794;
+
+    --plum:#49345F;
+
+    --cream:#FBF7EF;
+    --ivory:#FFFDF9;
+    --white:#FFFFFF;
+
+    --text:#4D5360;
+    --dark:#292634;
+    --muted:#7C8190;
+
+    --border:rgba(73,52,95,.10);
+
+    --shadow:
+        0 20px 60px rgba(73,52,95,.10);
+
+    --shadow-soft:
+        0 10px 35px rgba(73,52,95,.07);
+
+    --radius-lg:34px;
+    --radius-md:24px;
+    --radius-sm:16px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:var(--ivory);
+    color:var(--text);
+
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+
+    width:min(1180px,92%);
+
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   IMAGE SYSTEM
+========================================================= */
+
+.image-placeholder{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ice),
+            var(--lavender-mist)
+        );
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-md);
+
+    min-height:280px;
+
+}
+
+.image-placeholder img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+.image-placeholder:hover img{
+
+    transform:scale(1.045);
+
+}
+
+.image-wide{
+    min-height:390px;
+}
+
+.image-tall{
+    min-height:480px;
+}
+
+.image-small{
+    min-height:220px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:18px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(1120px,92%);
+
+    padding:13px 18px;
+
+    background:
+        rgba(255,253,249,.84);
+
+    backdrop-filter:blur(18px);
+
+    border:
+        1px solid
+        rgba(73,52,95,.09);
+
+    border-radius:100px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    z-index:1000;
+
+    transition:.35s ease;
+
+}
+
+.navbar.scrolled{
+
+    top:10px;
+
+    box-shadow:var(--shadow-soft);
+
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.navbar-logo{
+    width:48px;
+    height:48px;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:
+        transform .35s ease;
+}
+
+.logo:hover .navbar-logo{
+    transform:scale(1.06);
+}
+
+.logo small{
+
+    display:block;
+
+    font-size:9px;
+
+    letter-spacing:.18em;
+
+    color:var(--muted);
+
+    margin-top:2px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:26px;
+
+    align-items:center;
+
+}
+
+.nav-links a{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:var(--muted);
+
+    transition:.25s ease;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--purple-dark);
+
+}
+
+.nav-cta{
+
+    padding:11px 18px;
+
+    border-radius:50px;
+
+    background:var(--plum);
+
+    color:white !important;
+
+    box-shadow:
+        0 8px 22px
+        rgba(73,52,95,.15);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    padding:
+        150px
+        0
+        80px;
+
+    position:relative;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(205,236,239,.65),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(233,225,245,.75),
+            transparent 35%
+        ),
+
+        var(--ivory);
+
+    overflow:hidden;
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 13px;
+
+    border-radius:50px;
+
+    background:
+        rgba(233,225,245,.72);
+
+    color:var(--purple-dark);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.eyebrow::before{
+
+    content:"";
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--purple);
+
+}
+
+.hero h1{
+
+    font-size:
+        clamp(48px,6vw,82px);
+
+    line-height:.96;
+
+    letter-spacing:-.055em;
+
+    color:var(--plum);
+
+    max-width:700px;
+
+}
+
+.hero h1 span{
+
+    color:var(--purple);
+
+}
+
+.hero-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:var(--muted);
+
+    max-width:580px;
+
+    margin:28px 0;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:13px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    border:0;
+
+    cursor:pointer;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 22px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    font-size:13px;
+
+    transition:.3s ease;
+
+}
+
+.btn-primary{
+
+    background:var(--plum);
+
+    color:white;
+
+    box-shadow:
+        0 12px 30px
+        rgba(73,52,95,.18);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(73,52,95,.23);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    color:var(--plum);
+
+    border:
+        1px solid
+        var(--border);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--cream);
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-visual{
+
+    position:relative;
+
+}
+
+.hero-main-image{
+
+    min-height:570px;
+
+    border-radius:40px;
+
+    box-shadow:var(--shadow);
+
+    animation:
+        floatImage
+        7s
+        ease-in-out
+        infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+.hero-badge{
+
+    position:absolute;
+
+    bottom:28px;
+    left:-28px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    backdrop-filter:blur(15px);
+
+    padding:18px 20px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-soft);
+
+    max-width:230px;
+
+}
+
+.hero-badge strong{
+
+    display:block;
+
+    color:var(--plum);
+
+    font-size:14px;
+
+    margin-bottom:5px;
+
+}
+
+.hero-badge span{
+
+    font-size:11px;
+
+    line-height:1.5;
+
+    color:var(--muted);
+
+}
+
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust-strip{
+
+    padding:28px 0;
+
+    background:white;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.trust-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+}
+
+.trust-number{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    color:var(--plum);
+
+}
+
+.trust-label{
+
+    font-size:11px;
+
+    color:var(--muted);
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+
+    padding:110px 0;
+
+}
+
+.section-heading{
+
+    max-width:720px;
+
+    margin-bottom:55px;
+
+}
+
+.section-heading.center{
+
+    text-align:center;
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.section-kicker{
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    font-weight:800;
+
+    color:var(--purple);
+
+    margin-bottom:15px;
+
+}
+
+.section-heading h2{
+
+    color:var(--plum);
+
+    font-size:
+        clamp(34px,4vw,56px);
+
+    line-height:1.05;
+
+    letter-spacing:-.045em;
+
+}
+
+.section-heading p{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    color:var(--muted);
+
+    font-size:16px;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+
+    background:var(--cream);
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        .9fr
+        1.1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-copy p{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.about-highlights{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:14px;
+
+    margin-top:30px;
+
+}
+
+.highlight{
+
+    padding:22px;
+
+    background:white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:20px;
+
+    transition:.3s ease;
+
+}
+
+.highlight:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-soft);
+
+}
+
+.highlight strong{
+
+    display:block;
+
+    color:var(--plum);
+
+    margin-bottom:6px;
+
+}
+
+.highlight span{
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    color:var(--muted);
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products{
+
+    background:var(--ivory);
+
+}
+
+.product-feature{
+
+    display:grid;
+
+    grid-template-columns:
+        1.1fr
+        .9fr;
+
+    gap:30px;
+
+    padding:30px;
+
+    border-radius:34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ice),
+            var(--lavender-mist)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:var(--shadow-soft);
+
+    margin-bottom:30px;
+
+}
+
+.product-feature-image{
+
+    min-height:450px;
+
+}
+
+.product-content{
+
+    padding:30px 15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.product-badge{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    padding:7px 12px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:var(--purple-dark);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.12em;
+
+    margin-bottom:18px;
+
+}
+
+.product-content h3{
+
+    font-size:42px;
+
+    color:var(--plum);
+
+    letter-spacing:-.04em;
+
+    margin-bottom:18px;
+
+}
+
+.product-content p{
+
+    line-height:1.8;
+
+    color:var(--muted);
+
+    margin-bottom:22px;
+
+}
+
+.product-points{
+
+    display:grid;
+
+    gap:10px;
+
+}
+
+.product-point{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:flex-start;
+
+    font-size:13px;
+
+    color:var(--text);
+
+}
+
+.product-point::before{
+
+    content:"✓";
+
+    flex:none;
+
+    width:21px;
+    height:21px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    background:var(--purple);
+
+    color:white;
+
+    font-size:11px;
+
+}
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.product-card{
+
+    background:white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.product-card-image{
+
+    min-height:280px;
+
+    border-radius:0;
+
+    border:0;
+
+}
+
+.product-card-content{
+
+    padding:28px;
+
+}
+
+.product-card-content h3{
+
+    color:var(--plum);
+
+    font-size:25px;
+
+    margin-bottom:10px;
+
+}
+
+.product-card-content p{
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+/* =========================================================
+   HYBLISS DIFFERENCE
+========================================================= */
+
+.difference-section{
+
+    background:var(--plum);
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+.difference-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.difference-section .section-kicker{
+
+    color:var(--lavender);
+
+}
+
+.difference-section h2{
+
+    font-size:
+        clamp(36px,4vw,60px);
+
+    line-height:1.02;
+
+    letter-spacing:-.045em;
+
+    margin-bottom:20px;
+
+}
+
+.difference-section p{
+
+    color:
+        rgba(255,255,255,.72);
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.difference-list{
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+.difference-list div{
+
+    padding:16px 18px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    font-size:13px;
+
+}
+
+.difference-image{
+
+    min-height:480px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border-color:
+        rgba(255,255,255,.10);
+
+}
+
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
+
+.industries{
+
+    background:var(--cream);
+
+}
+
+.industry-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.industry-card{
+
+    padding:28px;
+
+    min-height:200px;
+
+    border-radius:25px;
+
+    background:white;
+
+    border:
+        1px solid
+        var(--border);
+
+    transition:.3s ease;
+
+}
+
+.industry-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-soft);
+
+}
+
+.industry-number{
+
+    font-size:11px;
+
+    color:var(--purple);
+
+    font-weight:800;
+
+    letter-spacing:.15em;
+
+    margin-bottom:28px;
+
+}
+
+.industry-card h3{
+
+    color:var(--plum);
+
+    margin-bottom:9px;
+
+}
+
+.industry-card p{
+
+    font-size:13px;
+
+    line-height:1.65;
+
+    color:var(--muted);
+
+}
+
+.industry-image{
+
+    grid-column:span 2;
+
+    min-height:250px;
+
+}
+
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.approach{
+
+    background:white;
+
+}
+
+.approach-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:16px;
+
+}
+
+.approach-card{
+
+    padding:28px 22px;
+
+    border-radius:23px;
+
+    background:var(--ivory);
+
+    border:
+        1px solid
+        var(--border);
+
+    transition:.3s ease;
+
+}
+
+.approach-card:hover{
+
+    background:var(--ice);
+
+    transform:translateY(-6px);
+
+}
+
+.approach-icon{
+
+    width:46px;
+    height:46px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    background:var(--lavender-mist);
+
+    color:var(--purple);
+
+    margin-bottom:22px;
+
+    font-weight:800;
+
+}
+
+.approach-card h3{
+
+    color:var(--plum);
+
+    margin-bottom:9px;
+
+}
+
+.approach-card p{
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    color:var(--muted);
+
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process{
+
+    background:var(--ice);
+
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.process-image{
+
+    min-height:500px;
+
+}
+
+.process-list{
+
+    display:grid;
+
+    gap:13px;
+
+}
+
+.process-step{
+
+    display:grid;
+
+    grid-template-columns:
+        55px
+        1fr;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:
+        rgba(255,255,255,.68);
+
+    border:
+        1px solid
+        rgba(73,52,95,.08);
+
+    border-radius:20px;
+
+    transition:.3s ease;
+
+}
+
+.process-step:hover{
+
+    transform:translateX(7px);
+
+    background:white;
+
+    box-shadow:var(--shadow-soft);
+
+}
+
+.step-number{
+
+    width:45px;
+    height:45px;
+
+    border-radius:15px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:var(--plum);
+
+    color:white;
+
+    font-weight:800;
+
+    font-size:13px;
+
+}
+
+.process-step h3{
+
+    color:var(--plum);
+
+    font-size:16px;
+
+    margin-bottom:5px;
+
+}
+
+.process-step p{
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    color:var(--muted);
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+    padding:100px 0;
+
+    background:var(--cream);
+
+}
+
+.cta-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:420px;
+
+    border-radius:38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--lavender-mist),
+            var(--ice-blue)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr
+        1.2fr;
+
+    align-items:center;
+
+    text-align:left;
+
+}
+
+.cta-image{
+
+    height:100%;
+
+    min-height:420px;
+
+    overflow:hidden;
+
+}
+
+.cta-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .8s ease;
+
+}
+
+.cta-box:hover .cta-image img{
+
+    transform:scale(1.04);
+
+}
+
+.cta-content{
+
+    padding:55px;
+
+}
+
+.cta-content h2{
+
+    font-size:
+        clamp(34px,4vw,54px);
+
+    color:var(--plum);
+
+    letter-spacing:-.045em;
+
+    margin-bottom:18px;
+
+}
+
+.cta-content p{
+
+    max-width:550px;
+
+    margin-bottom:25px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+
+    background:white;
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr
+        1.2fr;
+
+    gap:60px;
+
+}
+
+.contact-info{
+
+    display:grid;
+
+    gap:14px;
+
+}
+
+.contact-card{
+
+    padding:23px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:20px;
+
+    background:var(--ivory);
+
+    transition:.3s ease;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-soft);
+
+}
+
+.contact-card span{
+
+    display:block;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.15em;
+
+    color:var(--purple);
+
+    margin-bottom:8px;
+
+}
+
+.contact-card strong{
+
+    color:var(--plum);
+
+    font-size:15px;
+
+}
+
+.contact-form{
+
+    padding:32px;
+
+    border-radius:30px;
+
+    background:var(--cream);
+
+    border:
+        1px solid
+        var(--border);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:15px;
+
+}
+
+.form-group{
+
+    margin-bottom:15px;
+
+}
+
+.form-group.full{
+
+    grid-column:1/-1;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:var(--plum);
+
+    margin-bottom:7px;
+
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:14px;
+
+    background:white;
+
+    padding:13px 15px;
+
+    outline:none;
+
+    color:var(--text);
+
+    transition:.25s ease;
+
+}
+
+.form-group textarea{
+
+    min-height:130px;
+
+    resize:vertical;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    border-color:var(--purple);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(139,111,179,.08);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    padding:35px 0;
+
+    background:var(--plum);
+
+    color:white;
+
+}
+
+.footer-grid{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.footer-logo{
+
+    font-size:15px;
+
+    font-weight:800;
+
+    letter-spacing:.1em;
+
+}
+
+.footer-logo span{
+
+    display:block;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    color:
+        rgba(255,255,255,.5);
+
+    letter-spacing:.15em;
+
+    margin-top:4px;
+
+}
+
+.footer-copy{
+
+    font-size:11px;
+
+    color:
+        rgba(255,255,255,.5);
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .navbar{
+        width:94%;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .product-feature,
+    .difference-grid,
+    .process-grid,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero{
+        padding-top:125px;
+    }
+
+    .hero-visual{
+        margin-top:20px;
+    }
+
+    .hero-main-image{
+        min-height:430px;
+    }
+
+    .hero-badge{
+        left:20px;
+        bottom:20px;
+    }
+
+    .trust-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .industry-grid{
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .industry-image{
+
+        grid-column:span 2;
+
+    }
+
+    .approach-grid{
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .process-image{
+
+        order:2;
+
+    }
+
+    .cta-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cta-image{
+
+        min-height:280px;
+
+    }
+
+    .cta-content{
+
+        padding:40px 30px;
+
+        text-align:center;
+
+    }
+
+    .cta-content p{
+
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:52px;
+
+    }
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+    .trust-grid{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:18px 10px;
+
+    }
+
+    .about-highlights,
+    .product-grid,
+    .industry-grid,
+    .approach-grid,
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .industry-image{
+
+        grid-column:auto;
+
+    }
+
+    .product-feature{
+
+        padding:15px;
+
+    }
+
+    .product-feature-image{
+
+        min-height:320px;
+
+    }
+
+    .difference-image{
+
+        min-height:340px;
+
+    }
+
+    .process-image{
+
+        min-height:340px;
+
+    }
+
+    .cta-box{
+
+        border-radius:28px;
+
+    }
+
+    .cta-image{
+
+        min-height:250px;
+
+    }
+
+    .cta-content{
+
+        padding:35px 22px;
+
+    }
+
+    .footer-grid{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
+
+<nav class="navbar" id="navbar">
+
+    <a href="#home" class="logo">
+
+    <img
+        src="logo-t.png"
+        alt="HYBLISS CARE"
+        class="navbar-logo">
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#products">
+            Products
+        </a>
+
+        <a href="#industries">
+            Industries
+        </a>
+
+        <a href="#process">
+            How We Work
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+        <a href="#contact" class="nav-cta">
+            Enquire
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+
+        <div class="hero-copy reveal">
+
+            <div class="eyebrow">
+                Established 2024
+            </div>
+
+
+            <h1>
+
+                Hygiene that
+                <span>
+                    carries HYBLISS CARE.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                HYBLISS CARE offers its own range of wet wipes, hygiene kits
+                and sanitary kits, created for convenient everyday
+                hygiene across hospitality, healthcare and travel.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#products"
+                    class="btn btn-primary"
+                >
+                    Explore Products
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn btn-secondary"
+                >
+                    Talk to HYBLISS
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-visual reveal">
+
+
+            <div class="image-placeholder hero-main-image">
+
+                <img
+                    src="1.png"
+                    alt="HYBLISS CARE wet wipes"
+                >
+
+            </div>
+
+
+            <div class="hero-badge">
+
+                <strong>
+                    HYBLISS CARE. Every wipe.
+                </strong>
+
+                <span>
+                    A dedicated HYBLISS CARE wet wipe range
+                    designed for clean, convenient everyday use.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     TRUST STRIP
+======================================================= -->
+
+<div class="trust-strip">
+
+    <div class="container trust-grid">
+
+
+        <div class="trust-item">
+
+            <div class="trust-number">
+                2024
+            </div>
+
+            <div class="trust-label">
+                Founded
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-number">
+                B2B
+            </div>
+
+            <div class="trust-label">
+                Business-Focused Solutions
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =======================================================
+     ABOUT
+======================================================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about-image reveal">
+
+            <div class="image-placeholder image-tall">
+
+                <img
+                    src="2.png"
+                    alt="HYBLISS CARE hygiene products"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <div class="about-copy reveal">
+
+
+            <div class="section-kicker">
+                About HYBLISS
+            </div>
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Built around everyday care.
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Founded in 2024, HYBLISS CARE Products has
+                established itself as a trusted brand in the
+                personal hygiene sector, offering HYBLISS CARE
+                wet wipes and practical hygiene solutions.
+
+            </p>
+
+
+            <p>
+
+                Known for quality, convenience and practical solutions,
+                HYBLISS CARE serves diverse customer requirements
+                while focusing on quality, hygiene, safety and satisfaction.
+
+            </p>
+
+
+            <div class="about-highlights">
+
+
+                <div class="highlight">
+
+                    <strong>
+                        Quality
+                    </strong>
+
+                    <span>
+                        Focused on dependable hygiene solutions
+                        for everyday use.
+                    </span>
+
+                </div>
+
+
+                <div class="highlight">
+
+                    <strong>
+                        Convenience
+                    </strong>
+
+                    <span>
+                        Practical products designed around
+                        real-world business needs.
+                    </span>
+
+                </div>
+
+
+                <div class="highlight">
+
+                    <strong>
+                        Practical
+                    </strong>
+
+                    <span>
+                        Practical hygiene products designed for everyday
+                        business and customer environments.
+                    </span>
+
+                </div>
+
+
+                <div class="highlight">
+
+                    <strong>
+                        Satisfaction
+                    </strong>
+
+                    <span>
+                        Solutions developed with customer
+                        requirements at the centre.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PRODUCTS
+======================================================= -->
+
+<section class="products" id="products">
+
+    <div class="container">
+
+
+        <div class="section-heading center reveal">
+
+            <div class="section-kicker">
+                Product Portfolio
+            </div>
+
+
+            <h2>
+                A hygiene range built
+                around HYBLISS CARE.
+            </h2>
+
+
+            <p>
+
+                From HYBLISS CARE wet wipes to hygiene and sanitary
+                kits, our product range provides practical hygiene
+                solutions for businesses and organizations.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FEATURED PRODUCT -->
+
+        <div class="product-feature reveal">
+
+
+            <div class="image-placeholder product-feature-image">
+
+                <img
+                    src="3.jpeg"
+                    alt="HYBLISS CARE wet wipes"
+                >
+
+            </div>
+
+
+
+            <div class="product-content">
+
+
+                <span class="product-badge">
+                    FLAGSHIP OFFERING
+                </span>
+
+
+                <h3>
+                    HYBLISS CARE Wet Wipes
+                </h3>
+
+
+                <p>
+
+                    HYBLISS CARE wet wipes made for convenient,
+                    hygienic everyday use across hospitality,
+                    healthcare, travel and customer-facing environments.
+
+                </p>
+
+
+                <div class="product-points">
+
+
+                    <div class="product-point">
+                        HYBLISS CARE own-brand wet wipe range
+                    </div>
+
+
+                    <div class="product-point">
+                        Suitable for hospitality, healthcare and travel
+                    </div>
+
+
+                    <div class="product-point">
+                        Convenient hygiene for everyday use
+                    </div>
+
+
+                    <div class="product-point">
+                        Available for business and bulk requirements
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- OTHER PRODUCTS -->
+
+        <div class="product-grid reveal">
+
+
+            <div class="product-card">
+
+
+                <div class="image-placeholder product-card-image">
+
+                    <img
+                        src="4.png"
+                        alt="HYBLISS CARE hygiene kit"
+                    >
+
+                </div>
+
+
+                <div class="product-card-content">
+
+                    <h3>
+                        Hygiene Kits
+                    </h3>
+
+
+                    <p>
+
+                        Convenient hygiene combinations designed
+                        for organizations that want practical
+                        personal-care essentials in one solution.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="product-card">
+
+
+                <div class="image-placeholder product-card-image">
+
+                    <img
+                        src="5.jpeg"
+                        alt="HYBLISS CARE sanitary kit"
+                    >
+
+                </div>
+
+
+                <div class="product-card-content">
+
+                    <h3>
+                        Sanitary Kits
+                    </h3>
+
+
+                    <p>
+
+                        Practical sanitary hygiene solutions for
+                        hospitality, travel, healthcare and other
+                        customer-facing environments.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     HYBLISS DIFFERENCE
+======================================================= -->
+
+<section class="difference-section">
+
+
+    <div class="container difference-grid">
+
+
+        <div class="reveal">
+
+
+            <div class="section-kicker">
+                The HYBLISS Difference
+            </div>
+
+
+            <h2>
+
+                One name.
+                One hygiene range.
+                HYBLISS CARE.
+
+            </h2>
+
+
+            <p>
+
+                HYBLISS CARE offers its own wet wipe range,
+                built around everyday hygiene, convenience and a
+                consistent product experience for businesses and customers.
+
+            </p>
+
+
+            <div class="difference-list">
+
+
+                <div>
+                    HYBLISS CARE wet wipes
+                </div>
+
+
+                <div>
+                    Consistent product identity and presentation
+                </div>
+
+
+                <div>
+                    Practical hygiene for everyday use
+                </div>
+
+
+                <div>
+                    Suitable for hospitality, healthcare and travel
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="image-placeholder difference-image reveal">
+
+            <img
+                src="6.jpeg"
+                alt="HYBLISS CARE own-brand wet wipes"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     INDUSTRIES
+======================================================= -->
+
+<section class="industries" id="industries">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+
+            <div class="section-kicker">
+                Industries
+            </div>
+
+
+            <h2>
+
+                Designed for businesses
+                where hygiene meets people.
+
+            </h2>
+
+
+            <p>
+
+                HYBLISS CARE solutions can support a range of
+                customer-facing and institutional environments.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="industry-grid">
+
+
+            <div class="industry-card reveal">
+
+                <div class="industry-number">
+                    01
+                </div>
+
+                <h3>
+                    Resorts
+                </h3>
+
+                <p>
+                    Add a practical HYBLISS CARE hygiene solution
+                    to guest experiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="industry-card reveal">
+
+                <div class="industry-number">
+                    02
+                </div>
+
+                <h3>
+                    Hospitals
+                </h3>
+
+                <p>
+                    Practical hygiene solutions for healthcare
+                    environments and visitors.
+                </p>
+
+            </div>
+
+
+
+            <div class="industry-card reveal">
+
+                <div class="industry-number">
+                    03
+                </div>
+
+                <h3>
+                    MICE
+                </h3>
+
+                <p>
+                    HYBLISS CARE hygiene products for meetings,
+                    incentives, conferences and events.
+                </p>
+
+            </div>
+
+
+
+            <div class="industry-card reveal">
+
+                <div class="industry-number">
+                    04
+                </div>
+
+                <h3>
+                    Tour Operators
+                </h3>
+
+                <p>
+                    Compact hygiene products for journeys,
+                    tours and customer travel experiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="industry-card reveal">
+
+                <div class="industry-number">
+                    05
+                </div>
+
+                <h3>
+                    Bus Fleets
+                </h3>
+
+                <p>
+                    A convenient hygiene addition for passenger
+                    travel and fleet operators.
+                </p>
+
+            </div>
+
+
+
+            <div class="industry-card reveal">
+
+                <div class="industry-number">
+                    06
+                </div>
+
+                <h3>
+                    Business Supply
+                </h3>
+
+                <p>
+                    Practical HYBLISS CARE hygiene products for
+                    organizations and bulk supply requirements.
+                </p>
+
+            </div>
+
+
+
+            <div class="image-placeholder industry-image reveal">
+
+                <img
+                    src="7.jpeg"
+                    alt="HYBLISS CARE products across hospitality, healthcare and travel"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     APPROACH
+======================================================= -->
+
+<section class="approach">
+
+    <div class="container">
+
+
+        <div class="section-heading center reveal">
+
+
+            <div class="section-kicker">
+                Our Approach
+            </div>
+
+
+            <h2>
+                Simple. Practical. Reliable.
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="approach-grid">
+
+
+            <div class="approach-card reveal">
+
+                <div class="approach-icon">
+                    01
+                </div>
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    A strong focus on dependable personal
+                    hygiene products.
+                </p>
+
+            </div>
+
+
+
+            <div class="approach-card reveal">
+
+                <div class="approach-icon">
+                    02
+                </div>
+
+                <h3>
+                    Convenience
+                </h3>
+
+                <p>
+                    Products designed to fit naturally into
+                    everyday customer experiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="approach-card reveal">
+
+                <div class="approach-icon">
+                    03
+                </div>
+
+                <h3>
+                    Practical Solutions
+                </h3>
+
+                <p>
+                    A consistent HYBLISS CARE product range designed
+                    for practical everyday hygiene use.
+                </p>
+
+            </div>
+
+
+
+            <div class="approach-card reveal">
+
+                <div class="approach-icon">
+                    04
+                </div>
+
+                <h3>
+                    Satisfaction
+                </h3>
+
+                <p>
+                    Keeping hygiene, safety and customer
+                    satisfaction at the heart of the experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PROCESS
+======================================================= -->
+
+<section class="process" id="process">
+
+    <div class="container process-grid">
+
+
+        <div class="image-placeholder process-image reveal">
+
+            <img
+                src="8.jpeg"
+                alt="HYBLISS CARE product supply process"
+            >
+
+        </div>
+
+
+
+        <div class="reveal">
+
+
+            <div class="section-heading">
+
+
+                <div class="section-kicker">
+                    How We Work
+                </div>
+
+
+                <h2>
+                    From requirement
+                    to product supply.
+                </h2>
+
+
+                <p>
+
+                    Every business has different hygiene requirements.
+                    HYBLISS CARE provides practical products
+                    suited to the application, environment and
+                    quantity required.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="process-list">
+
+
+                <div class="process-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+
+                            We understand your business,
+                            application and hygiene requirement.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="process-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Recommend
+                        </h3>
+
+                        <p>
+
+                            We identify a suitable hygiene
+                            product solution for your requirement.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="process-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Select
+                        </h3>
+
+                        <p>
+
+                            We help identify the HYBLISS CARE products
+                            suited to your application and quantity.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="process-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Supply
+                        </h3>
+
+                        <p>
+
+                            The selected HYBLISS CARE products are
+                            prepared for your business requirements.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     CTA
+======================================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+
+        <div class="cta-box reveal">
+
+
+            <div class="cta-image">
+
+                <img
+                    src="9.png"
+                    alt="HYBLISS CARE hygiene products"
+                >
+
+            </div>
+
+
+
+            <div class="cta-content">
+
+
+                <h2>
+
+                    Let's create a better
+                    hygiene experience.
+
+                </h2>
+
+
+                <p>
+
+                    Looking for HYBLISS CARE wet wipes,
+                    hygiene kits or sanitary kits for your business?
+                    Tell us what you need.
+
+                </p>
+
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary"
+                >
+                    Start an Enquiry
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     CONTACT
+======================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+
+            <div class="section-kicker">
+                Contact HYBLISS
+            </div>
+
+
+            <h2>
+                Let's discuss your requirement.
+            </h2>
+
+
+            <p>
+
+                Tell us about your business, quantity requirements
+                and product requirements.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info reveal">
+
+
+                <div class="contact-card">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        connect@hyblisscare.in
+                    </strong>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+                        +91 7871177577
+                    </strong>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <span>
+                        Established
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <span>
+                        Products
+                    </span>
+
+                    <strong>
+                        Wet Wipes · Hygiene Kits · Sanitary Kits
+                    </strong>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <span>
+                        Serving
+                    </span>
+
+                    <strong>
+                        Resorts · Hospitals · MICE · Tour Operators · Bus Fleets
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-logo">
+
+            HYBLISS CARE
+
+            <span>
+                CLEANER DAYS. BRIGHTER JOURNEYS.
+            </span>
+
+        </div>
+
+
+        <div class="footer-copy">
+
+            © 2026 HYBLISS CARE Products.
+            All rights reserved.
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+const navbar =
+    document.getElementById("navbar");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if(window.scrollY > 30){
+
+            navbar.classList.add("scrolled");
+
+        }else{
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("active");
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.12
+        }
+
+    );
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+
+/* =========================================================
+   SMOOTH NAVIGATION
+========================================================= */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            function(e){
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+
+                if(target){
+
+                    e.preventDefault();
+
+                    target.scrollIntoView({
+
+                        behavior:"smooth",
+
+                        block:"start"
+
+                    });
+
+                }
+
+            }
+        );
+
+    });
+
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+
+contactForm.addEventListener(
+    "submit",
+    function(e){
+
+        e.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "name"
+            ).value;
+
+
+        const company =
+            document.getElementById(
+                "company"
+            ).value;
+
+
+        const phone =
+            document.getElementById(
+                "phone"
+            ).value;
+
+
+        const email =
+            document.getElementById(
+                "email"
+            ).value;
+
+
+        const interest =
+            document.getElementById(
+                "interest"
+            ).value;
+
+
+        const message =
+            document.getElementById(
+                "message"
+            ).value;
+
+
+        const subject =
+            encodeURIComponent(
+                "HYBLISS CARE Enquiry - "
+                + interest
+            );
+
+
+        const body =
+            encodeURIComponent(
+
+`Name: ${name}
+
+Company: ${company}
+
+Phone: ${phone}
+
+Email: ${email}
+
+Interested In: ${interest}
+
+Requirement:
+${message}`
+
+            );
+
+
+        window.location.href =
+            `mailto:connect@hyblisscare.in?subject=${subject}&body=${body}`;
+
+    }
+);
+
+
+
+/* =========================================================
+   BUTTON INTERACTION
+========================================================= */
+
+document
+    .querySelectorAll(".btn")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "mousemove",
+            e => {
+
+                const rect =
+                    button.getBoundingClientRect();
+
+
+                const x =
+                    e.clientX -
+                    rect.left;
+
+
+                const y =
+                    e.clientY -
+                    rect.top;
+
+
+                button.style.transform =
+
+                    `translate(
+                        ${(x - rect.width / 2) * .025}px,
+                        ${(y - rect.height / 2) * .025}px
+                    )`;
+
+            }
+        );
+
+
+        button.addEventListener(
+            "mouseleave",
+            () => {
+
+                button.style.transform = "";
+
+            }
+        );
+
+
+    });
+
+
+</script>
+
+</body>
+
+</html>
